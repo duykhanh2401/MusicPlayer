@@ -283,7 +283,6 @@ const app = {
               song.classList.add('active');
             }
         });
-        this.setConfig('SongCurrent',this.currentIndex);
     },
 
     nextSong: function () {
@@ -324,7 +323,6 @@ const app = {
     loadConfig: function () {
         this.isRandom = this.config.isRandom;
         this.isRepeat = this.config.isRepeat;
-        this.currentIndex = this.config.SongCurrent;
     },
     start: function() {
         this.loadConfig();
