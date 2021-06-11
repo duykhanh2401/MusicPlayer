@@ -15,6 +15,7 @@ const prevBtn = $('.btn-prev');
 const randomBtn = $('.btn-random');
 const repeatBtn = $('.btn-repeat');
 const playlist = $('.playlist');
+const volume = $('#volume');
 const app = {
     currentIndex: 0,
     isPlaying: false,
@@ -185,6 +186,13 @@ const app = {
             audio.currentTime = seekTime;
 
             checkOnmouseAndTouch = true;
+        }
+
+        // Xử lý âm thanh
+        volume.onchange = function(e) {
+            const seekVolume = e.target.value / 100;
+            audio.volume = seekVolume;
+            console.log(seekVolume)
         }
         
         // Khi tiến độ bài hát thay đổi
